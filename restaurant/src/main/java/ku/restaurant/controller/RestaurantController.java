@@ -35,4 +35,10 @@ public class RestaurantController {
         return service.getRestaurantById(id);
     }
 
+    @PutMapping("/restaurants")
+    public Restaurant update(@RequestBody Restaurant restaurant) {
+        return service.update(restaurant);
+    }
+
+
 }

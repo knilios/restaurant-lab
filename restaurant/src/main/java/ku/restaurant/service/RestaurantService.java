@@ -37,4 +37,17 @@ public class RestaurantService {
         return repository.findById(id).get();
     }
 
+    public Restaurant update(Restaurant requestBody) {
+        UUID id = requestBody.getId();
+        Restaurant record = repository.findById(id).get();
+        record.setName(requestBody.getName());
+        record.setRating(requestBody.getRating());
+        record.setLocation(requestBody.getLocation());
+
+
+        record = repository.save(record);
+        return record;
+    }
+
+
 }
