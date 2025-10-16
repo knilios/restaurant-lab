@@ -40,5 +40,11 @@ public class RestaurantController {
         return service.update(restaurant);
     }
 
+    @DeleteMapping("/restaurants/{id}")
+    public Restaurant delete(@PathVariable UUID id) {
+        return service.delete(id);
+    }
+
+
 
 }
