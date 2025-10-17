@@ -4,6 +4,7 @@ import java.time.Instant;
 import java.util.List;
 import java.util.UUID;
 
+import ku.restaurant.dto.RestaurantRequest;
 import ku.restaurant.entity.Restaurant;
 import ku.restaurant.repository.RestaurantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,11 +28,19 @@ public class RestaurantService {
     }
 
 
-    public Restaurant create(Restaurant restaurant) {
-        restaurant.setCreatedAt(Instant.now());
+    public Restaurant create(RestaurantRequest request) {
+        Restaurant restaurant = new Restaurant();
+        restaurant.setName(request.getName());
+        restaurant.setRating(request.getRating());
+        restaurant.setLocation(request.getLocation());
+
+
+        restaurant.setCreatedAt(  Instant.now()  );
+        restaurant.setUpdatedAt(  restaurant.getCreatedAt()  );
         Restaurant record = repository.save(restaurant);
         return record;
     }
+
 
     public Restaurant getRestaurantById(UUID id) {
         return repository.findById(id).get();

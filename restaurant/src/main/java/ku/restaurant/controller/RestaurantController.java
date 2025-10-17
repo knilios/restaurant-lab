@@ -1,5 +1,6 @@
 package ku.restaurant.controller;
 
+import ku.restaurant.dto.RestaurantRequest;
 import ku.restaurant.entity.Restaurant;
 import ku.restaurant.service.RestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import java.util.UUID;
 import java.util.List;
 
 @RestController
+@RequestMapping("/api")
 public class RestaurantController {
 
     private RestaurantService service;
@@ -26,7 +28,7 @@ public class RestaurantController {
     }
 
     @PostMapping("/restaurants")
-    public Restaurant create(@RequestBody Restaurant restaurant) {
+    public Restaurant create(@RequestBody RestaurantRequest restaurant) {
         return service.create(restaurant);
     }
 

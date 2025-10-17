@@ -22,6 +22,7 @@ public class Restaurant {
     private double rating;
     private String location;
     private Instant createdAt;
+    private Instant updatedAt;
 
     // Getter and Setter for id
     public UUID getId() {
@@ -66,6 +67,10 @@ public class Restaurant {
 
     public void setCreatedAt(Instant createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public void setUpdatedAt(Instant updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }
 
