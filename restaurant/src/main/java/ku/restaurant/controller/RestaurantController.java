@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
-
 import java.util.List;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api")
@@ -28,7 +28,7 @@ public class RestaurantController {
     }
 
     @PostMapping("/restaurants")
-    public Restaurant create(@RequestBody RestaurantRequest restaurant) {
+    public Restaurant create(@Valid @RequestBody RestaurantRequest restaurant) {
         return service.create(restaurant);
     }
 

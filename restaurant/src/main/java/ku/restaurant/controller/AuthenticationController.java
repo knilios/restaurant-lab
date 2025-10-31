@@ -14,7 +14,7 @@ import ku.restaurant.security.JwtUtil;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-
+import jakarta.validation.Valid;
 
 
 @RestController
@@ -37,7 +37,7 @@ public class AuthenticationController {
 
 
     @PostMapping("/login")
-    public String authenticateUser(@RequestBody LoginRequest request) {
+    public String authenticateUser(@Valid @RequestBody LoginRequest request) {
 
 
         Authentication authentication =
@@ -55,7 +55,7 @@ public class AuthenticationController {
 
 
     @PostMapping("/signup")
-    public String registerUser(@RequestBody SignupRequest request) {
+    public String registerUser(@Valid @RequestBody SignupRequest request) {
 
 
         if (userService.userExists(request.getUsername()))
