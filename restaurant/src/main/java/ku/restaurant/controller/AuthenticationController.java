@@ -3,6 +3,8 @@ package ku.restaurant.controller;
 
 import ku.restaurant.dto.SignupRequest;
 import ku.restaurant.service.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,6 +24,8 @@ import jakarta.validation.Valid;
 @RestController
 @RequestMapping("/api/auth")
 public class AuthenticationController {
+
+    Logger logger = LoggerFactory.getLogger(AuthenticationController.class);
 
 
     private UserService userService;
@@ -51,6 +55,7 @@ public class AuthenticationController {
                 );
         UserDetails userDetails =
                 (UserDetails) authentication.getPrincipal();
+        logger.info(userDetails.getUsername(), " has logged in with the role: ", userDetails.getAuthorities());
         return ResponseEntity.ok(jwtUtils.generateToken(userDetails.getUsername()));
     }
 
