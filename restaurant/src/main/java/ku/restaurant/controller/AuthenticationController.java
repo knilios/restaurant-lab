@@ -4,6 +4,8 @@ package ku.restaurant.controller;
 import ku.restaurant.dto.SignupRequest;
 import ku.restaurant.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,7 +39,7 @@ public class AuthenticationController {
 
 
     @PostMapping("/login")
-    public String authenticateUser(@Valid @RequestBody LoginRequest request) {
+    public ResponseEntity<String> authenticateUser(@Valid @RequestBody LoginRequest request) {
 
 
         Authentication authentication =
@@ -49,21 +51,21 @@ public class AuthenticationController {
                 );
         UserDetails userDetails =
                 (UserDetails) authentication.getPrincipal();
-        return jwtUtils.generateToken(userDetails.getUsername());
+        return ResponseEntity.ok(jwtUtils.generateToken(userDetails.getUsername()));
     }
 
 
 
     @PostMapping("/signup")
-    public String registerUser(@Valid @RequestBody SignupRequest request) {
+    public ResponseEntity<String> registerUser(@Valid @RequestBody SignupRequest request) {
 
 
         if (userService.userExists(request.getUsername()))
-            return "Error: Username is already taken!";
+            return new ResponseEntity<>("Error: Username is already taken!", HttpStatus.BAD_REQUEST);
 
 
         userService.createUser(request);
-        return "User registered successfully!";
+        return ResponseEntity.ok("User registered successfully!");
     }
 }
 

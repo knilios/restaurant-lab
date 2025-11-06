@@ -6,6 +6,7 @@ import ku.restaurant.service.RestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
 import java.util.UUID;
 import java.util.List;
 import jakarta.validation.Valid;
@@ -48,7 +49,7 @@ public class RestaurantController {
     }
 
     @GetMapping("/restaurants/name/{name}")
-    public Restaurant getRestaurantByName(@PathVariable String name) {
+    public Optional<Restaurant> getRestaurantByName(@PathVariable String name) {
         return service.getRestaurantByName(name);
     }
 

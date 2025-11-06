@@ -35,9 +35,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
             FilterChain filterChain
     ) throws ServletException, IOException {
 
-
-        try {
-            String jwt = null;
+         String jwt = null;
 
 
             // Get authorization header and validate
@@ -66,8 +64,5 @@ public class JwtAuthFilter extends OncePerRequestFilter {
                         .setAuthentication(auth);
             }
             filterChain.doFilter(request, response);
-        } catch (Exception e) {
-            System.out.println("Cannot set user authentication: " + e);
-        }
     }
 }

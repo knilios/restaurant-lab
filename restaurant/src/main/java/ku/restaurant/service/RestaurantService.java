@@ -2,8 +2,11 @@ package ku.restaurant.service;
 
 import java.time.Instant;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
+import jakarta.persistence.EntityExistsException;
+import jakarta.persistence.EntityNotFoundException;
 import ku.restaurant.dto.RestaurantRequest;
 import ku.restaurant.entity.Restaurant;
 import ku.restaurant.repository.RestaurantRepository;
@@ -29,6 +32,8 @@ public class RestaurantService {
 
 
     public Restaurant create(RestaurantRequest request) {
+        if (repository.existsByName(request.getName()))
+            throw new EntityExistsException("Restaurant name already exists");
         Restaurant restaurant = new Restaurant();
         restaurant.setName(request.getName());
         restaurant.setRating(request.getRating());
@@ -43,7 +48,8 @@ public class RestaurantService {
 
 
     public Restaurant getRestaurantById(UUID id) {
-        return repository.findById(id).get();
+        return repository.findById(id).orElseThrow(() ->
+                new EntityNotFoundException("Restaurant not found"));
     }
 
     public Restaurant update(Restaurant requestBody) {
@@ -64,8 +70,9 @@ public class RestaurantService {
         return record;
     }
 
-    public Restaurant getRestaurantByName(String name) {
-        return repository.findByName(name);
+    public Optional<Restaurant> getRestaurantByName(String name) {
+        return Optional.ofNullable(repository.findByName(name).orElseThrow(() ->
+                new EntityNotFoundException("Restaurant not found")));
     }
 
 
