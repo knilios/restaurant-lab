@@ -1,0 +1,62 @@
+2025-11-21T10:58:30.425+07:00  INFO 11212 --- [restaurant] [main] ku.restaurant.RestaurantApplication      : Starting RestaurantApplication using Java 23.0.1 with PID 11212 (C:\Users\krist\work\university\year3\semester1\Software Safety\week10 (real)\restaurant\restaurant\target\classes started by krist in C:\Users\krist\work\university\year3\semester1\Software Safety\week10 (real)\restaurant)
+2025-11-21T10:58:30.433+07:00  INFO 11212 --- [restaurant] [main] ku.restaurant.RestaurantApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-11-21T10:58:31.645+07:00  INFO 11212 --- [restaurant] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21T10:58:31.755+07:00  INFO 11212 --- [restaurant] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 2 JPA repository interfaces.
+2025-11-21T10:58:32.558+07:00  INFO 11212 --- [restaurant] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8443 (https)
+2025-11-21T10:58:32.575+07:00  INFO 11212 --- [restaurant] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-21T10:58:32.577+07:00  INFO 11212 --- [restaurant] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-11-21T10:58:32.672+07:00  INFO 11212 --- [restaurant] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-21T10:58:32.673+07:00  INFO 11212 --- [restaurant] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2161 ms
+2025-11-21T10:58:33.450+07:00  INFO 11212 --- [restaurant] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-21T10:58:33.494+07:00  INFO 11212 --- [restaurant] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-21T10:58:33.715+07:00  INFO 11212 --- [restaurant] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2cea921a
+2025-11-21T10:58:33.717+07:00  INFO 11212 --- [restaurant] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-21T10:58:33.791+07:00  WARN 11212 --- [restaurant] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-21T10:58:35.051+07:00  INFO 11212 --- [restaurant] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-21T10:58:35.536+07:00  INFO 11212 --- [restaurant] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-11-21T10:58:35.605+07:00  WARN 11212 --- [restaurant] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-21T10:58:35.907+07:00  WARN 11212 --- [restaurant] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/h2-console/**'], Ant [pattern='/h2-console/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-21T10:58:36.458+07:00  INFO 11212 --- [restaurant] [main] o.a.t.util.net.NioEndpoint.certificate   : Connector [https-jsse-nio-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\krist\.keystore] using alias [tomcat] with trust store [null]
+2025-11-21T10:58:36.480+07:00  INFO 11212 --- [restaurant] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8443 (https) with context path '/'
+2025-11-21T10:58:36.489+07:00  INFO 11212 --- [restaurant] [main] ku.restaurant.RestaurantApplication      : Started RestaurantApplication in 6.86 seconds (process running for 8.351)
+2025-11-21T11:00:33.995+07:00  INFO 11212 --- [restaurant] [https-jsse-nio-8443-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-21T11:00:33.995+07:00  INFO 11212 --- [restaurant] [https-jsse-nio-8443-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-21T11:00:33.997+07:00  INFO 11212 --- [restaurant] [https-jsse-nio-8443-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-11-21T11:00:34.106+07:00  INFO 11212 --- [restaurant] [https-jsse-nio-8443-exec-10] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [g_state={"i_l":0,"i_ll":1763697624794}] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2025-11-21T11:13:59.595+07:00  INFO 11212 --- [restaurant] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-21T11:13:59.616+07:00  INFO 11212 --- [restaurant] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-21T11:13:59.623+07:00  INFO 11212 --- [restaurant] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-21T11:13:59.627+07:00  INFO 11212 --- [restaurant] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-21T11:13:59.634+07:00  INFO 11212 --- [restaurant] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-21T11:14:05.788+07:00  INFO 15152 --- [restaurant] [main] ku.restaurant.RestaurantApplication      : Starting RestaurantApplication using Java 23.0.1 with PID 15152 (C:\Users\krist\work\university\year3\semester1\Software Safety\week10 (real)\restaurant\restaurant\target\classes started by krist in C:\Users\krist\work\university\year3\semester1\Software Safety\week10 (real)\restaurant)
+2025-11-21T11:14:05.792+07:00  INFO 15152 --- [restaurant] [main] ku.restaurant.RestaurantApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-11-21T11:14:06.882+07:00  INFO 15152 --- [restaurant] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-21T11:14:06.982+07:00  INFO 15152 --- [restaurant] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 2 JPA repository interfaces.
+2025-11-21T11:14:07.770+07:00  INFO 15152 --- [restaurant] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8443 (https)
+2025-11-21T11:14:07.797+07:00  INFO 15152 --- [restaurant] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-21T11:14:07.798+07:00  INFO 15152 --- [restaurant] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-11-21T11:14:07.908+07:00  INFO 15152 --- [restaurant] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-21T11:14:07.909+07:00  INFO 15152 --- [restaurant] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2026 ms
+2025-11-21T11:14:08.617+07:00  INFO 15152 --- [restaurant] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-21T11:14:08.662+07:00  INFO 15152 --- [restaurant] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-21T11:14:08.835+07:00  INFO 15152 --- [restaurant] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@61993d18
+2025-11-21T11:14:08.838+07:00  INFO 15152 --- [restaurant] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-21T11:14:08.888+07:00  WARN 15152 --- [restaurant] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-21T11:14:10.104+07:00  INFO 15152 --- [restaurant] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-21T11:14:10.538+07:00  INFO 15152 --- [restaurant] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-11-21T11:14:10.597+07:00  WARN 15152 --- [restaurant] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-21T11:14:10.861+07:00  WARN 15152 --- [restaurant] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/h2-console/**'], Ant [pattern='/h2-console/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-21T11:14:11.338+07:00  INFO 15152 --- [restaurant] [main] o.a.t.util.net.NioEndpoint.certificate   : Connector [https-jsse-nio-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\krist\.keystore] using alias [tomcat] with trust store [null]
+2025-11-21T11:14:11.358+07:00  INFO 15152 --- [restaurant] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8443 (https) with context path '/'
+2025-11-21T11:14:11.366+07:00  INFO 15152 --- [restaurant] [main] ku.restaurant.RestaurantApplication      : Started RestaurantApplication in 6.354 seconds (process running for 7.538)
+2025-11-21T11:14:24.277+07:00  INFO 15152 --- [restaurant] [https-jsse-nio-8443-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-21T11:14:24.277+07:00  INFO 15152 --- [restaurant] [https-jsse-nio-8443-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-21T11:14:24.279+07:00  INFO 15152 --- [restaurant] [https-jsse-nio-8443-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-11-21T11:14:24.393+07:00  INFO 15152 --- [restaurant] [https-jsse-nio-8443-exec-10] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [g_state={"i_l":0,"i_ll":1763698456706}] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2025-11-21T11:45:00.382+07:00  INFO 15152 --- [restaurant] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-21T11:45:00.412+07:00  INFO 15152 --- [restaurant] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-21T11:45:00.437+07:00  INFO 15152 --- [restaurant] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-21T11:45:00.458+07:00  INFO 15152 --- [restaurant] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-21T11:45:00.465+07:00  INFO 15152 --- [restaurant] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
